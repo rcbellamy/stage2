@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from django_facebook.api import get_facebook_graph
+from django_facebook.api import get_persistent_graph
 
 def home( request ):
     try:
         #graph = user.get_offline_graph( )
-        graph = get_facebook_graph( request )
+        graph = get_persistent_graph( request )
         fm = graph.get( 'me' )
     except:
         fm = ''
