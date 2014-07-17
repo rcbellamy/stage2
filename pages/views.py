@@ -1,5 +1,9 @@
 from django.shortcuts import render
 
 def home( request ):
-    graph = user.get_offline_graph( )
-    return render( request, 'home.html', {'fm': graph.get( 'me' ) } )
+    try:
+        graph = user.get_offline_graph( )
+        fm = graph.get( 'me' )
+    except:
+        fm = ''
+    return render( request, 'home.html', {'fm': fm } )
