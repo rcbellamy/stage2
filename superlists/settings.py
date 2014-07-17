@@ -177,3 +177,4 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
+FACEBOOK_LOGIN_DEFAULT_REDIRECT = 'http://stage.page4me.co/'
