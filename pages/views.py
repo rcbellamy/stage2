@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
 def home( request ):
-    return render( request, 'home.html' )
+    graph = user.get_offline_graph( )
+    return render( request, 'home.html', {'fm': graph.get( 'me' ) } )
