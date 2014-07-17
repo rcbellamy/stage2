@@ -4,7 +4,6 @@
 <title>Pages</title>
 <body>
 <form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
-    <input type="hidden" value="http://stage.page4me.co/{{ request.path }}" name="next" />
     <input type="hidden" value="http://stage.page4me.co/{{ request.path }}" name="register_next" />
     <input type="hidden" value="http://stage.page4me.co/{{ request.path }}" name="error_next" />
     {% csrf_token %}
